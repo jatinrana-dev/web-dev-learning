@@ -1,0 +1,177 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+h1{
+    background-color: #ce5b5b;
+}
+a{
+    background-color: #115949;
+}
+.box {
+height: 100px;
+width: 100px;
+display: inline-block;
+background-color: #441212;
+}
+
+/* block elements-headings paragraphs,divs-puri 100% widht le lete h =widht nhi bhi doge in elements ko toh 100 percent le lenge */
+/* inline elements- anchor tag,inline elements-jitna content h utni hi space lenge vo log */
+/* inline block=inline aur block dono ki properites use krta h =transform properites bhi work krengi aur inline elements ki trah bhi work krega*/
+.child1{
+    height: 30vw;
+    width: 40vw;
+    background-color: lightseagreen;
+}
+.child2{
+    height: 40vh;
+    width: 40vh;
+    background-color: #072333;
+}
+.box2{
+    height: 30vh;
+    width: 30vw;
+    background-color: #e9b329;
+}
+.parent{
+    background-color: #4f0303;
+    font-size: 40px;
+}
+.parent h1{
+    font-size: 1em;
+}
+.parent h2{
+    font-size: 4em;
+}
+.parent h3{
+    font-size: 0.5em;
+}
+.parent h4{
+    font-size: 1.5em;
+}
+
+.main{
+    min-height: 100%;
+    width: 100%;
+    background-color: #643864;
+}
+.box1{
+    height: 200px;
+    width: 200px;
+    background-color: #e2e214;
+    border: 2px solid white;
+}
+.main2{
+    max-height: 75%;
+    background-color: #9893bc;
+}
+.main3{
+    height: 100%;
+    width: 100%;
+    background-color: lightslategray;
+}
+.box4{
+    height: 50vmin;
+    width: 500px;
+    background-color: orange;
+}
+.box5{
+    height: 50vmin;
+    width: 60vmin;
+    background-color: #8d1919;
+}
+
+.box6{
+    height: 300px;
+    width: 300px;
+    background-color: #3c2e2e;
+}
+
+@media (max-widht:500px) {
+    .box6{
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background-color: #193987;
+
+    }
+    
+}
+nav{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(17, 71, 71);
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+nav h2{
+color: white;
+}
+nav .part2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+nav .part2 h4{
+    color: white;
+   
+}
+i{
+    color: white;
+    display: none;
+}
+@media (max-width:400px) {
+nav{
+    background-color: royalblue;
+
+}    
+i{
+    display: initial;
+}
+.part2 h4{
+    display: none;
+
+} 
+}
+.div{
+    height: 100%;
+    width: 100%;
+}
+
+
+.box6{
+    height: 200px;
+    width: 200px;
+    background-color: #be1c1c;
+    position: absolute;
+    animation-name: one;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+@keyframes one {
+    from{
+        left: 0;
+        background-color: #be1c1c;
+        border-radius: 0%;
+        rotate: 0;
+
+    }
+    to{
+        background-color: #1017ea;
+        border-radius: 70%;
+        left: 70%;
+        rotate: 360deg;
+    }
+}
+
+/* responsive practice */

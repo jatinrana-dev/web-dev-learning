@@ -1,0 +1,175 @@
+@font-face {
+  font-family: apple;
+  src: url(./sf-pro-text_regular.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 100px;
+  font-weight: 200;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, fr);
+  gap: 10px 20px;
+}
+.box {
+  background-color: red;
+  border: 2px solid white;
+}
+
+main2 {
+  height: 100%;
+  width: 100%;
+  background-color: #26504a;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* to align elements in centre in their respective grids */
+  align-items: center;
+  justify-items: center;
+}
+main2 .box {
+  background: #122e3e;
+  height: 100px;
+  width: 100px;
+}
+main3 {
+  height: 100%;
+  width: 100%;
+  background-color: #0d0c0c;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 50px;
+  grid-template-areas:
+    "top-center top-center top-center"
+    "left-upper center right-upper"
+    "left-bottom center right-bottom";
+  gap: 8px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.top-center {
+  background-color: rgb(180, 74, 74);
+  grid-area: top-center;
+  border-radius: 10px;
+  margin: 5px 5px 5px 5px;
+}
+.left-upper {
+  background-color: rgb(13, 125, 195);
+  grid-area: left-upper;
+
+  border-radius: 10px;
+}
+.left-bottom {
+  background-color: rgb(105, 74, 27);
+  grid-area: left-bottom;
+  border-radius: 10px;
+}
+.right-upper {
+  background-color: rgb(124, 83, 171);
+  grid-area: right-upper;
+  border-radius: 10px;
+}
+.right-bottom {
+  background-color: rgb(62, 45, 19);
+  grid-area: right-bottom;
+  border-radius: 10px;
+}
+
+.center {
+  background-color: lightgoldenrodyellow;
+  grid-area: center;
+  border-radius: 10px;
+}
+
+main4 {
+  height: 100%;
+  width: 100%;
+  background-color: #585858;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 10% 60% 30%;
+  margin-top: 50px;
+  grid-template-areas:
+    "header header header"
+    "left-center left-center right-center "
+    "left-bottom1 left-bottom2 right-center";
+  gap: 8px;
+}
+main4 .header {
+  background-color: #126da6;
+  border-radius: 10px;
+  grid-area: header;
+}
+main4 .left-center {
+  background-color: #6a0707;
+  border-radius: 10px;
+  grid-area: left-center;
+}
+main4 .left-bottom1 {
+  background-color: lightgoldenrodyellow;
+  border-radius: 10px;
+  grid-area: left-bottom1;
+}
+main4 .left-bottom2 {
+  background-color: #9e5a91;
+  border-radius: 10px;
+  grid-area: left-bottom2;
+}
+main4 .right-center {
+  background-color: #225437;
+  border-radius: 10px;
+  grid-area: right-center;
+}
+
+main5 {
+  height: 100%;
+  width: 100%;
+  background-color: #272424;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 50px;
+  gap: 12px;
+  grid-template-areas:
+    "left-upper center-upper right "
+    "left-bottom left-bottom  right"
+    ;
+}
+main5 .left-upper {
+  background-color: #13424c;
+  grid-area: left-upper;
+  border-radius: 10px;
+}
+main5 .left-bottom {
+  background-color: #164e2b;
+  grid-area: left-bottom;
+  border-radius: 10px;
+}
+
+main5 .center-upper {
+  background-color: #1dbab8;
+  grid-area: center-upper;
+  border-radius: 10px;
+}
+main5 .right{
+  background-color: #94bb85;
+  grid-area: right;
+  border-radius: 10px;
+}
+
