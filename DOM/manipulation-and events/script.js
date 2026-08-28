@@ -53,3 +53,23 @@ btn2.addEventListener("click", function () {
     bulb2.classList.toggle("Lightup");
 } 
 )
+
+
+let inp = document.querySelector("input")
+let bttn = document.querySelector("#bttn")
+ 
+bttn.addEventListener("click", () =>{
+    console.log(inp.value)
+}) 
+
+
+let header = document.createElement("header")
+console.log(header)
+let span = document.createElement("span")
+console.log(span)
+span.textContent= ("hey i am inside the span tag")
+
+let section = document.querySelector("section")
+
+section.appendChild(header)
+section.appendChild(span)
