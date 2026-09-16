@@ -41,14 +41,22 @@ console.log(arr4);
 
  console.log(arr6)
 
- var arr7 = []
- for( let a = 0;)
 
 
+var arr = [1,2,3,4,5]
+const arr9 = arr.slice(1,4)
 
+console.log(arr9)
 
+console.log(arr.includes(4)
+)
+console.log(arr.indexOf(3))
+console.log(arr.indexOf(99))
 
-
+console.log(arr.concat([8,9,70,79])
+)
+console.log(arr.join(" ")
+)
 
 
 
