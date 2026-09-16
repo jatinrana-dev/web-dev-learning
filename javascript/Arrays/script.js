@@ -60,6 +60,45 @@ console.log(arr.join(" ")
 
 
 
+var arr = [4,5,6,6,7,]
+arr.forEach(function(){
+    console.log("heloo")
+})
+var sum = 0
+arr.forEach(function(elem,idx){
+    console.log(elem,idx)
+    sum = sum + elem
+})
+console.log(sum)
+
+ var arr2 = arr.map((elem) =>{
+    return elem*elem
+
+})
+console.log(arr2)
+
+var arr3 = arr.map((e)=> {
+    return sum = sum + e
+
+
+})
+var arr4 = [94,3,53,634,23,45,343,54,3434,45,]
+ var arr5 = arr4.filter((elem) =>{
+    if (elem>100) return elem
+
+})
+console.log(arr5)
+
+var arr6 = [30,40,20,20,30,99000]
+
+var summ = arr6.reduce((acc,val)=>{
+    return acc +val
+
+})
+console.log(summ)
+
+
+
 
 
 
