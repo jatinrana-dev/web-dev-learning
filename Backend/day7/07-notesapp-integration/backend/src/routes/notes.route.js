@@ -4,7 +4,8 @@ const {
     getNotesController,
     getSingleNoteController,
 updatedNotesController,
-    deleteNoteController
+    deleteNoteController,
+    singleEntityUpdateController
 } = require('../controllers/notes.controller')
  const router = express.Router()
 
@@ -13,6 +14,8 @@ router.get("/allnotes" , getNotesController)
 router.get('/:id', getSingleNoteController)
 router.put("/:id", updatedNotesController);
 router.delete("/:id", deleteNoteController);
+
+router.patch('/:id/single' ,singleEntityUpdateController)
 
 
  module.exports = router

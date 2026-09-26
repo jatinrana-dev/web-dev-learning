@@ -90,6 +90,24 @@ const deleteNoteController = async (req, res) => {
   }
 };
 
+const singleEntityUpdateController = async () =>{
+  try {
+    let noteId = req.params.id
+    let body = req.body 
+    let updatedNote = await NotesModel.findByIdAndUpdate(noteId , body , {new:true})
+
+    return res.status(200).json({
+      message:"note updated succesfulyy",
+      data:updatedNote
+    })
+    
+  } catch (error) {
+    return res.status(500).json({
+      message: "INTERNAL SERVER ERROR"
+    })
+    
+  }
+}
 
 
     module.exports = {
@@ -97,7 +115,8 @@ const deleteNoteController = async (req, res) => {
          getNotesController,
          getSingleNoteController,
 updatedNotesController,
-         deleteNoteController
+         deleteNoteController,
+         singleEntityUpdateController
     }
     
 
