@@ -2,6 +2,8 @@ const jwt = require('jsonwebtoken')
 const bcyrpt = require('bcryptjs')
 const userModel = require('../models/user.model.js')
 
+
+
 const authentication = async(req,res,next) => {
     const token = req.headers.authorization
 if (!token) {
