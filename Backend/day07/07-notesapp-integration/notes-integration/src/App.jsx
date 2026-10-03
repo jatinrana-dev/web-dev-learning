@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import axios from "axios";
+import NotesCards from './NotesCards';
 
 const App = () => {
+
+  const [allNotes , setAllnotes] = useState([])
+  
   const [formvalues,setFormvalues] = useState({
     title: "",
     description: ""
@@ -20,8 +24,30 @@ let res  =  await axios.post("http://localhost:2501/notes/create" , formvalues)
 
       
     }
-     
+     let getAllnotes = async ()=>{
+      try {
+        let res = await axios.get("http://localhost:2501/notes/allnotes")
+        console.log(res)
+        setAllnotes(res.data.data)
 
+      } catch (error) {
+        console.log("error in getting all notes")
+        
+      }
+     }
+useEffect( ()=>{
+  getAllnotes()
+},[]
+)
+
+let deleteNote = async ()=>{
+  try {
+    
+  } catch (error) {
+    console.log("error while delteing the notes")
+    
+  }
+}
   return (
     <div className="min-h-screen bg-gray-950 flex flex-col items-center py-12 px-4">
       <h1 className="text-4xl font-bold text-white mb-8 tracking-tight">
@@ -44,6 +70,7 @@ let res  =  await axios.post("http://localhost:2501/notes/create" , formvalues)
         value={formvalues.description}
           placeholder="Description"
           rows="4"
+          minLength={20}
         
           className="w-full bg-gray-800 text-white placeholder-gray-500 rounded-lg px-4 py-3 outline-none border border-transparent focus:border-indigo-500 transition-colors resize-none"
         />
@@ -54,6 +81,12 @@ let res  =  await axios.post("http://localhost:2501/notes/create" , formvalues)
           Add Note
         </button>
       </form>
+
+      <div>
+        {allNotes.map((val)=>(
+          <NotesCards key={val._id} note ={val}/>
+        ))}
+      </div>
     </div>
   )
 }

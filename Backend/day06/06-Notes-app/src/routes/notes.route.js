@@ -6,6 +6,7 @@ const {
 } = require('../controllers/notes.controller')
  const router = express.Router()
 
+ 
  router.post("/create", createNotescontroller)
 router.get("/allnotes" , getNotesController)
 router.get('/:id', getSingleNoteController)

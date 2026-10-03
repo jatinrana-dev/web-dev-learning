@@ -15,6 +15,9 @@ const createNotescontroller = async (req,res)=>{
 })
     } catch (error) {
         console.log("error in creation")
+        return res.status(500).json({
+          message:"internal serer error"
+        })
         
     }}
 
