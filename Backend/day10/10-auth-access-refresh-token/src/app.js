@@ -9,10 +9,7 @@ app.use(cookieParser())
 app.get('/' ,(req,res)=>{
     res.send("backend succesfuly")
 
+})
     app.use('/auth' ,authroute)
 
-
-
-
-})
 module.exports = app
