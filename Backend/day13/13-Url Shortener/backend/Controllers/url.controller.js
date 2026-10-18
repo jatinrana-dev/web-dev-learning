@@ -63,7 +63,7 @@ catch (error) {
     }
 };
 
-module.exports = getUrlController;
+
 
 
 

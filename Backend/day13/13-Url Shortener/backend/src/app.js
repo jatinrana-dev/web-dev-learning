@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
 const connectdb = require('../Config/db');
-const router = require('../Routes/url.routes');
+const urlroutes = require('../Routes/url.routes');
+const redirectroutes = require('../Routes/redirect.routes');
 
 app.use(express.json());
-app.use('/api/url', router);
+app.use('/api/url', urlroutes);
+app.use('/' ,redirectroutes);
 
 connectdb();
 
@@ -13,3 +15,4 @@ app.get('/', (req, res) => {
 })
 
 module.exports = app;
+
